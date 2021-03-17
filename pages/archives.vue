@@ -49,7 +49,7 @@ export default {
   }
   .archive-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     .archive-item {
@@ -57,17 +57,47 @@ export default {
       padding: 0.6rem;
       width: 30%;
       background-color: #ffffff;
-      border-radius: 0.4rem;
-      margin: 1rem 0;
-      box-shadow: 0 1px 4px rgb(0 0 0 / 4%);
-      border: 1px solid rgba(184,197,214,.2);
+      border-left: 0.1rem solid #f5f5f5;
+      border-top: 0.1rem solid #f5f5f5;
+      box-sizing: border-box;
+      transition: all 0.3s;
+      position: relative;
       div:nth-child(1) {
         font-size: 0.95rem;
+        cursor: pointer;
       }
       div:nth-child(2) {
-        margin-top: 0.2rem;
+        margin-top: 1.5rem;
         font-size: 0.8rem;
         text-align: right;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 0 solid #505050;
+        transition: all 0.3s;
+      }
+      &:hover::after {
+        border-bottom: 0.4rem solid #505050;
+      }
+    }
+    @media screen and (max-width: 375px){
+      .archive-item {
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 376px){
+      .archive-item {
+        width: 50%;
+      }
+    }
+    @media screen and (min-width: 768px){
+      .archive-item {
+        width: 33%;
       }
     }
   }

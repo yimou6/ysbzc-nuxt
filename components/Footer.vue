@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
     <p>&copy; 版权所有</p>
-    <p>-----</p>
+    <p>ysbzc.top</p>
   </div>
 </template>
 

@@ -1,5 +1,7 @@
 <template>
-  <div>about</div>
+  <div class="container">
+    无
+  </div>
 </template>
 
 <script>
